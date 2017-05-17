@@ -1,0 +1,28 @@
+---
+title: "Plotly Assignment"
+author: "Ryan Estrellado"
+date: "5/16/2017"
+output: ioslides_presentation
+---
+
+```{r echo = F, message = F}
+library(knitr)
+library(plotly)
+```
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Plotly Plot Generated On May 16, 2017
+
+```{r message = F}
+data("Loblolly")
+
+plot_ly(x = Loblolly$age, y = Loblolly$height) %>% 
+  layout(title = "Pine Tree Age vs. Height", 
+         xaxis = list(title = "Age"), 
+         yaxis = list(title = "Height"))
+```
+
+
